@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem solving</title>
+</head>
+<body>
+    <p>2.Find the minimal Angle</p>
+    <pre>
+        var Minimal_Angle = (h, m) => 
+{
+              h= h%12
+              let hour =(h*360)/12 +(m*360)/(12*60)
+              let min = (m*360)/60
+              let angle = Math.abs(hour-min);
+
+              if(angle>180)
+              return 360-angle
+
+              else{
+                return angle
+              }
+       
+};
+    </pre>
+    <P>2.Check whether the given year is a leap year or not</P>
+    <pre>
+        var Check_Leap = (year) => 
+{
+  if(year%400===0){
+    return "Leap Year"
+  }else if(year%100===0){
+    return "Non Leap Year"
+  }else if(year%4===0){
+     return "Leap Year"
+  }else{
+    return "Non Leap Year"
+  }
+};
+    </pre>
+    </p>
+    <p>3.Perfect number Check</p>
+        <pre>
+            let temp = 0;
+           for( i=1;i<N/2;i++)
+             {
+                 if(N%i === 0)
+                  {
+                    temp += i;
+                  }
+             }
+
+             if(temp === N )
+                {
+               return ("YES.");
+                } 
+             else
+                {
+               return ("NO");
+                }   
+
+        </pre>>
+        <p>Reverse the Number</p>
+        <pre>
+             
+var Reverse_Number = (N) => 
+{
+  let rev=0;
+  while(N!==0){
+    let digit=N%10;
+    rev=rev*10+digit;
+    N=Math.floor(N/10);
+  }
+  return rev;
+};
+ 
+
+</pre>
+<p>4.search substring</p>
+<pre>
+    var Substring_Check = (S1, S2) => 
+{
+
+  
+  if(S1.includes(S2)){
+    return "YES";
+  }else{
+    return "NO";
+  }
+
+
+
+};
+ 
+</pre>
+
+    
+</body>
+</html>
